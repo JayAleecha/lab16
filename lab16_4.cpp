@@ -17,3 +17,20 @@ int main(){
 	
 	return 0;
 }
+void shuffle(int &a,int &b,int &c,int &d){
+    int m[]={a,b,c,d};
+    int r[]={0,0,0,0};
+    for(int i=0;i<4;i++){
+        r[i]=rand()%4;
+      for(int j=0;j<i;j++){
+        if(r[i]==r[j]){
+            i--;
+        }
+        
+      }
+    }
+    a=m[r[0]];
+    b=m[r[1]];
+    c=m[r[2]];
+    d=m[r[3]];
+}
